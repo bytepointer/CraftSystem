@@ -1,4 +1,9 @@
-local CraftingSystem = {}
+export type CraftingSystemType = {
+	getCrafts: (player: Player) -> Object,
+	craft: (player: Player, item: Object) -> Object
+}
+
+local CraftingSystem: CraftingSystemType = {}
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -37,7 +42,7 @@ function CraftingSystem:craft(player, item)
 		return errors["NO_SUFFICIENT_MATERIAL"]
 	end
 	
-	local addedItem = InventoryService:addItem(player, {
+	local addedItem = InventoryService:AddItem(player, {
 		id = item,
 		amount = 1
 	})

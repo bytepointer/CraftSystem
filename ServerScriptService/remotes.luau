@@ -22,7 +22,7 @@ end
 
 changeInventory.OnServerEvent:Connect(function(player, sourceSlot, targetSlot)
 	
-	print(InventoryService:changeInventory(player, sourceSlot, targetSlot))
+	print(InventoryService:ChangeInventory(player, sourceSlot, targetSlot))
 end)
 
 splitItem.onServerEvent:Connect(function(player, item)
@@ -40,6 +40,19 @@ game.Players.PlayerRemoving:Connect(function(player)
 	InventoryService:SaveData(player)
 end)
 
+--[[
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+]]
+
+-- TEST CASE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+game.Players.PlayerAdded:Connect(function(player)
+	
+	InventoryService:AddItem(player, {
+		id = 4,
+		amount = 10
+	})
+	
+end)
 -- CRAFT
 
 getAvaliableCrafts.OnServerInvoke = function(player)
@@ -51,4 +64,3 @@ Craft.onServerEvent:Connect(function(player, item)
 	
 	CraftingService:craft(player, item)
 end)
-

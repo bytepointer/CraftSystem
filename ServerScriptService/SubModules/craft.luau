@@ -1,4 +1,11 @@
-local CraftManager = {}
+export type CraftManagerType = {
+	hasRecipe: (player: Player, item: Object) -> boolean,
+	getAvaliableCrafts: (player: Player) -> Object,
+	getNotAvaliableCrafts: (avaliableCrafts: Object) -> Object,
+	getCraftById: (id: number) -> Object
+}
+
+local CraftManager: CraftManagerType = {}
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 

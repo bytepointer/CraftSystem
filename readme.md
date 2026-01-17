@@ -1,12 +1,12 @@
-## About
+## ABOUT
 
 - Craft any item using InventoryService API
 
-## How to use
+## HOW TO USE
 
 - Follow the steps in https://github.com/bytepointer/InventoryService and put the Service in your place (instead of InventoryService modules.luau, put the modules.luau from here`
-- Copy ServerScriptService folder, putting the submodules instead of `CraftSystem.luau`
-- Create the remote events in the ReplicatedStorage
-- Create the `crafts.luau` in ReplicatedStorage/Items
+- Copy ServerScriptService folder, putting the submodules inside of `CraftSystem.luau`
+- Create the remote events in ReplicatedStorage
+- Copy the `crafts.luau` in ReplicatedStorage/Items to ReplicatedStorage/Items
 
 You can download the rbxl file to test or see the file structure
